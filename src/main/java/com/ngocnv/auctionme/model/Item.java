@@ -13,7 +13,8 @@ public class Item implements Serializable{
 
     @Id
     @GeneratedValue
-    private Integer id;
+    @Column(name="item_id")
+    private Integer itemId;
 
     @Column(name = "name")
     private String name;

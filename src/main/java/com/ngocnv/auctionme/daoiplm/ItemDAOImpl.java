@@ -23,8 +23,7 @@ public class ItemDAOImpl implements ItemDAO {
     @Override
     public List<Item> getAllItems() {
 
-        String query = "select a from ";
-        List<Item> items = entityManager.createQuery(query, Item.class).getResultList();
-        return null;
+        List<Item> items = entityManager.createQuery("SELECT c FROM Item c ").getResultList();
+        return items;
     }
 }
