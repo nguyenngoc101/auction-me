@@ -20,6 +20,7 @@ public class Main {
         items.forEach(item -> {
             System.out.println(item.getName() + " " + item.getCode());
         });
+        context.close();
 
     }
 }

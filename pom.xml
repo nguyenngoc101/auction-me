@@ -13,6 +13,7 @@
         <spring.framework.version>4.2.5.RELEASE</spring.framework.version>
         <hibernate.version>4.1.9.Final</hibernate.version>
         <mysql.connector.version>5.1.31</mysql.connector.version>
+        <jackson.version>2.7.5</jackson.version>
     </properties>
 
     <dependencies>
@@ -44,6 +45,18 @@
         </dependency>
 
         <dependency>
+             <groupId>org.aspectj</groupId>
+             <artifactId>aspectjrt</artifactId>
+             <version>1.7.1</version>
+        </dependency>
+
+        <dependency>
+             <groupId>org.aspectj</groupId>
+             <artifactId>aspectjweaver</artifactId>
+             <version>1.7.1</version>
+        </dependency>
+
+        <dependency>
             <groupId>cglib</groupId>
             <artifactId>cglib</artifactId>
             <version>3.1</version>
@@ -59,6 +72,19 @@
             <groupId>org.springframework</groupId>
             <artifactId>spring-tx</artifactId>
             <version>${spring.framework.version}</version>
+        </dependency>
+
+        <!-- Spring MVC-->
+        <dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-webmvc</artifactId>
+			<version>${spring.framework.version}</version>
+		</dependency>
+
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+            <version>${jackson.version}</version>
         </dependency>
 
         <!-- Hibernate Framework -->
@@ -77,7 +103,6 @@
 
     </dependencies>
 
-
     <build>
         <pluginManagement>
             <plugins>
@@ -88,6 +113,16 @@
                     <configuration>
                         <source>1.6</source>
                         <target>1.6</target>
+                    </configuration>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-war-plugin</artifactId>
+                    <version>2.4</version>
+                    <configuration>
+                        <warSourceDirectory>src/main/webapp</warSourceDirectory>
+                        <warName>AutionMeService</warName>
+                        <failOnMissingWebXml>false</failOnMissingWebXml>
                     </configuration>
                 </plugin>
             </plugins>

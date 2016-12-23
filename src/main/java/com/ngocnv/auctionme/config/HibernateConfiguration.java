@@ -59,8 +59,7 @@ public class HibernateConfiguration {
 
     @Bean
     public HibernateJpaVendorAdapter jpaVendorAdapter() {
-        HibernateJpaVendorAdapter hibernateJpaVendorAdapter = new HibernateJpaVendorAdapter();
-        return hibernateJpaVendorAdapter;
+        return new HibernateJpaVendorAdapter();
     }
 
     @Bean
