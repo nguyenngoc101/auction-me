@@ -1,5 +1,6 @@
 package com.ngocnv.auctionme.main;
 
+import com.ngocnv.auctionme.config.RootConfig;
 import com.ngocnv.auctionme.config.SpringConfiguration;
 import com.ngocnv.auctionme.model.Item;
 import com.ngocnv.auctionme.service.AuctionMeService;
@@ -14,16 +15,13 @@ import java.util.List;
 public class Main {
 
     public static void main(String[] args) {
-        AbstractApplicationContext context = new AnnotationConfigApplicationContext(SpringConfiguration.class);
+        AbstractApplicationContext context = new AnnotationConfigApplicationContext(RootConfig.class);
         AuctionMeService auctionMeService = (AuctionMeService) context.getBean("auctionMeService");
         List<Item> items = auctionMeService.getAllItems();
-//        auctionMeService.forEach(item -> {
-//            System.out.println(item.getName() + " " + item.getCode());
-//        });
-
-        for (Item item: items) {
+        items.forEach(item -> {
             System.out.println(item.getName() + " " + item.getCode());
-        }
+        });
+
         context.close();
 
     }

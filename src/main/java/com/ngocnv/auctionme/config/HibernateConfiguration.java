@@ -22,7 +22,6 @@ import java.util.Properties;
 
 @Configuration
 @EnableTransactionManagement
-@ComponentScan({"com.ngocnv.auctionme.config"})
 @PropertySource(value = {"classpath:application.properties", "classpath:application-mysql.properties"})
 public class HibernateConfiguration {
 
