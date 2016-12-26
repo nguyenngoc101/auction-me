@@ -2,8 +2,6 @@ package com.ngocnv.auctionme.config;
 
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
 
-import javax.persistence.criteria.Root;
-
 /**
  * Created by framgia on 23/12/2016.
  */

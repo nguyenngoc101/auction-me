@@ -8,10 +8,11 @@ import java.util.List;
 
 /**
  * Created by framgia on 22/12/2016.
+ * Mostly used as a facade so all controllers have a single point of entry
  */
 
 @Service
-public interface ItemService {
+public interface AuctionMeService {
 
     List<Item> getAllItems();
 }
