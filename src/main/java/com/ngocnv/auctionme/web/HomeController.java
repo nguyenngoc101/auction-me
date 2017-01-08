@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
  * Created by framgia on 26/12/2016.
  */
 
-@Controller
+@Controller("home")
 public class HomeController {
 
     @RequestMapping(value="/", method = RequestMethod.GET)
