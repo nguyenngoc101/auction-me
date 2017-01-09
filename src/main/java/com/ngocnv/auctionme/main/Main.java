@@ -28,7 +28,7 @@ public class Main {
         Address homeAddress = new Address("Ha Noi", "Lang", "0084");
         //Address billingAddress = new Address("Ha Noi", "Ung Hoa", "Noi Xa");
         User user = new User();
-        user.setName("ngocnv");;
+        user.setName("ngocnv1");;
         user.setAge("18");
         user.setHomeAddress(homeAddress);
         //user.setBillingAddress(billingAddress);
