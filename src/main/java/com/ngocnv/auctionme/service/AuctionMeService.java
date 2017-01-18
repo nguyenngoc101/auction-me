@@ -1,7 +1,6 @@
 package com.ngocnv.auctionme.service;
 
-import com.ngocnv.auctionme.model.Item;
-import com.ngocnv.auctionme.model.User;
+import com.ngocnv.auctionme.model.*;
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 
@@ -17,4 +16,8 @@ public interface AuctionMeService {
 
     List<Item> getAllItems();
     User createUser(User user);
+    List<Book> getAllBooks();
+    Book createBook(Book book);
+    BlogPost createBlogPost(BlogPost blogPost);
+    Publication createPublication(Publication publication);
 }
